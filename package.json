@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dev": "SET DEBUG=benjicom:server & npm start",
     "release-dev": "export DEBUG=benjicom:server && npm start",
-    "release": "sudo npm start",
+    "release": "sudo npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
