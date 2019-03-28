@@ -1,0 +1,1 @@
+pscp -r -i "C:\Program Files (x86)\PuTTY\benjijang-backend.ppk" . ec2-user@ec2-3-210-117-232.compute-1.amazonaws.com:/home/ec2-user/benjicom/
