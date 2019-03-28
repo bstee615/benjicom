@@ -1,0 +1,28 @@
+link(rel="stylesheet", href="stylesheets/header.css")
+
+.header-container
+  .header
+    .header-group.image-group
+      img.round(src="/images/me.png")
+    .header-group.title-chunk
+      h1(style="text-align: left") Benji#[br]Steenhoek
+
+    .header-group.header-group-group.links-group
+      .header-group
+        .wrapper
+          h1 Links
+      .header-group.links-list
+        a.btn(href="/") Home
+        //- a.btn(href="/projects") Projects
+
+    //- .header-group.animation
+      //- include ./coding.pug
+      
+    .header-group.header-group-group.contacts-group
+      .header-group
+        .wrapper
+          h1 Contacts
+      .header-group.links-list
+        a.btn(href="mailto:benjaminjsteenhoek@gmail.com", target="_blank") benjaminjsteenhoek@gmail.com
+        a.btn(href="tel:515-480-5789") 515-480-5789
+        a.btn(href="https://www.linkedin.com/in/ben-steenhoek/", target="_blank") linkedin.com/in/ben-steenhoek

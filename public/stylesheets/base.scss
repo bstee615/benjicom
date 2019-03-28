@@ -1,0 +1,36 @@
+@import 'defs.scss';
+  
+body, html {
+  font-family: $font-normal;
+  width: 100%;
+  height: 100%;
+}
+
+p, a, span {
+  font-size: $fontsize-med;
+}
+
+h1 {
+  font-size: $fontsize-bigger;
+  font-family: $font-heading;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  $padding: $pad-med;
+  overflow: hidden;
+
+  padding: $padding;
+  padding-right: 0;
+  height: padded-width(100%, $padding);
+
+  display: flex;
+  flex-flow: row nowrap;
+  @media only screen and (max-width: 900px) {
+    flex-flow: column nowrap;
+  }
+}

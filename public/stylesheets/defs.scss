@@ -1,0 +1,39 @@
+$fontsize-huge: 48px;
+$fontsize-bigger: 32px;
+$fontsize-big: 28px;
+$fontsize-med: 20px;
+
+@font-face {
+  font-family: Input;
+  src: url(InputMono-Regular.ttf);
+}
+
+$font-normal: 'Open Sans', sans-serif;
+$font-heading: 'Bitter', sans-serif;
+$font-code: 'Input';
+
+$pad-thin: 10px;
+$pad-med: 20px;
+$pad-wide: 40px;
+
+$brand-gray: lighten(lightgray, 10%);
+
+$brand-border: 1px solid gray;
+
+@function padded-width($width, $padding) {
+  @return calc(#{$width} - (2 * #{$padding}));
+}
+
+@mixin extended-border($width) {
+  padding-left: $pad-wide;
+  padding-right: $pad-wide;
+  border-bottom: $brand-border;
+  border-width: 2px;
+}
+
+.centered-container {
+  display: flex;
+  flex-flow: center nowrap;
+  align-items: center;
+  justify-content: center;
+}

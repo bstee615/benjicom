@@ -1,0 +1,162 @@
+@mixin drawn($left, $bottom, $width, $height) {
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+}
+
+@function to-px($exp) {
+  @return ($exp) + px;
+}
+
+.frame {
+  background-image: url(/images/zen.jpg);
+
+  background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-sizing:border-box;
+  display:inline-block;
+  margin:10vh 10vw;
+  height:80vh;
+  padding:8vmin;
+  position:relative;
+  text-align:center;
+  &:before {
+    border-radius:2px;
+    bottom:-0.5vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-0.5vmin;
+    position:absolute;
+    right:-0.5vmin;
+    top:-0.5vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-1vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-1vmin;
+    position:absolute;
+    right:-1vmin;
+    top:-1vmin;
+  }
+}
+
+.coding-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &, * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  $box-width-px: 100;
+  $box-height-px: 70;
+  $box-rim-width-px: 10;
+
+  .pc {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    .pc-box-shade {
+      @include drawn(0, 0, to-px($box-width-px), to-px($box-height-px));
+  
+      border-radius: 20px;
+      background-color: gray;
+    }
+  
+    .pc-box {
+      @include drawn(0, 0, to-px($box-width-px), to-px($box-height-px));
+  
+      border-radius: 20px;
+      background-color: lightgray;
+  
+      .screen {
+        $screen-width-px: $box-width-px - (2 * $box-rim-width-px);
+        $screen-height-px: $box-height-px - (2 * $box-rim-width-px);
+  
+        @include drawn(10px, 10px, to-px($screen-width-px), to-px($screen-height-px));
+        
+        border-radius: 10px;
+        background-color: blue;
+  
+        .screen-code {
+          $code-line-height-px: 5;
+          $num-children: 3;
+          $code-offset-rim-width-px: 10;
+          $code-offset-between-codelines-px: ($screen-height-px - $box-rim-width-px - $code-line-height-px) / $num-children;
+  
+          @keyframes code-lines-jump {
+            0% {
+              width: 0px;
+            }
+  
+            100% {
+              width: 40px;
+            }
+          }
+  
+          @for $i from 1 through $num-children {
+            &:nth-child(#{$i}) {
+              $code-bottom-px: $code-offset-rim-width-px + ($code-offset-between-codelines-px * ($i - 1));
+              @include drawn(10px, to-px($code-bottom-px), 0px, to-px($code-line-height-px));
+  
+              animation-name: code-lines-jump;
+              animation-duration: 1s;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+              animation-delay: (($i - 1) * 0.2) + s;
+            }
+          }
+          
+          border-radius: 10px;
+          background-color: white;
+        }
+      }
+      
+      .pc-box-stand-stem {
+        @include drawn(to-px($box-width-px / 2 - 10), -20px, 20px, 20px);
+        background-color: inherit;
+      }
+      
+      .pc-box-stand-base {
+        @include drawn(to-px($box-width-px / 2 - 25), -30px, 50px, 10px);
+        border-radius: 10px;
+        background-color: inherit;
+      }
+    }
+  }
+
+  .table {
+    .table-top {
+      @include drawn(calc(50% - 100px), calc(50% - 40px), 200px, 15px);
+
+      // border-radius: 5px;
+      background-color: brown;
+      
+      .table-leg-left {
+        @include drawn(20px, -30px, 12px, 40px);
+
+        border-radius: inherit;
+        background-color: inherit;
+      }
+
+      .table-leg-right {
+        @include drawn(to-px(200 - 20 - 20), -30px, 12px, 40px);
+
+        border-radius: inherit;
+        background-color: inherit;
+      }
+    }
+  }
+}

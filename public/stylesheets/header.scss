@@ -1,0 +1,155 @@
+@import 'defs.scss';
+
+.header-container {
+  display: inline-block;
+  padding-right: $pad-med;
+  white-space: nowrap;
+
+  border-right: $brand-border;
+  height: 100%;
+  @media only screen and (max-width: 900px) {
+    border-right: none;
+    border-bottom: $brand-border;
+    margin: $pad-med;
+    position: sticky;
+    display: inline-block;
+    height: 30%;
+    padding: 0;
+  }
+
+  .header {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    @media only screen and (max-width: 900px) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: $fontsize-huge;
+      @include extended-border(40px);
+    }
+
+    *:not(a):not(.header-group) {
+      margin: 0 0 10px 0
+    }
+
+    .header-group {
+      align-items: baseline;
+      text-align: center;
+
+      &.image-group {
+        display: flex;
+        flex-flow: row nowrap;
+        @media only screen and (max-width: 900px) {
+          flex-flow: column nowrap;
+          // margin-right: $pad-med;
+        }
+        justify-content: center;
+
+        img.round {
+          border-radius: 50%;
+
+          width: 200px;
+          height: 200px;
+          @media only screen and (max-width: 900px) {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      a, a:visited {
+        color: gray;
+        display: inline;
+        text-decoration: underline;
+
+        &.btn {
+          color: black;
+          display: block;
+          text-decoration: none;
+          padding: $pad-thin $pad-med $pad-thin $pad-med;
+        }
+  
+        &:hover {
+          background-color: $brand-gray;
+        }
+  
+        &:not(:last-child) {
+          border: $brand-border;
+          border-bottom: none;
+        }
+        &:last-child {
+          border: $brand-border;
+        }
+      }
+
+      &.title-chunk::after {
+        @media only screen and (min-width: 900px) {
+          content: "Software Developer";
+          font-size: $fontsize-bigger;
+        }
+        @media only screen and (max-width: 900px) {
+          content: "benjaminjsteenhoek@gmail.com \A 515-480-5789";
+          font-size: $fontsize-med;
+        }
+
+        padding: 0;
+        margin: 0;
+        white-space: pre;
+        text-align: left;
+        padding: 4px;
+      }
+
+      &.links-list {
+        margin-top: 10px;
+      }
+      .header-group {
+        text-align: left;
+        margin: 0;
+
+        > * {
+          margin: 0;
+          display: inline-block;
+        }
+
+        .wrapper {
+          display: flex;
+          justify-content: center;
+        }
+
+        h1 {
+          text-align: center;
+          font-size: $fontsize-big;
+        }
+      }
+      &.header-group-group {
+        margin: 0;
+        > * {
+          margin: 0;
+        }
+      }
+      &.links-group {
+        @media only screen and (max-width: 900px) {
+          // margin-left: auto;
+        }
+      }
+      &.contacts-group {
+        @media only screen and (min-width: 900px) {
+          margin-top: auto;
+        }
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+      &.animation {
+        margin-top: auto;
+        width: 100%;
+        height: 30%;
+      }
+    }
+  }
+}
