@@ -17,5 +17,4 @@ npm i
 
 # run
 sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
-echo "After this next command, Ctrl+Z and then run bg"
 npm start > log.txt
