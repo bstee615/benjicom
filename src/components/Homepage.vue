@@ -9,22 +9,22 @@
 </template>
 
 <script>
-    import Header from './Header.vue';
-    import VueMarkdown from 'vue-markdown';
-    import GetBlurbs from '../utils/GetBlurbs';
+import Header from './Header.vue';
+import VueMarkdown from 'vue-markdown';
+import GetBlurbs from '../utils/GetBlurbs';
 
-    const Homepage = {
-        name: "Homepage",
-        components: {
-            Header,
-            VueMarkdown
-        },
-        computed: {
-            blurbs: GetBlurbs
-        }
+const Homepage = {
+    name: 'Homepage',
+    components: {
+        Header,
+        VueMarkdown
+    },
+    computed: {
+        blurbs: GetBlurbs
     }
+};
 
-    export default Homepage;
+export default Homepage;
 </script>
 
 <style lang="less">

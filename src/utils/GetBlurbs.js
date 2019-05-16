@@ -1,7 +1,9 @@
-import blurbsStr from '../assets/blurbs.md';
+import axios from 'axios';
 
 // Gets an array of GitHub markdown blurbs from the network
 // TODO: Actually get it from the network?????
 export default function() {
-    return JSON.parse(blurbsStr);
+    axios.get(publicPath + '/assets/blurbs.json').then(response => {
+        console.log(response);
+    });
 }
