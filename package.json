@@ -1,48 +1,43 @@
 {
-  "name": "hello-world",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "babel-plugin-transform-import-to-read-file-sync": "^0.2.1",
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-markdown": "^2.2.4"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "babel-eslint": "^10.0.1",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "benjicom",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "node app.js",
+        "watch": "webpack --watch --config src/webpack.config.dev.js",
+        "build": "webpack --config src/webpack.config.dev.js",
+        "lint": "eslint src"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "dependencies": {
+        "axios": "^0.18.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-import-to-read-file-sync": "^0.2.1",
+        "babel-preset-env": "^1.7.0",
+        "core-js": "^2.6.5",
+        "express": "^4.16.4",
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "mini-css-extract-plugin": "^0.6.0",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.7.0",
+        "vue-markdown": "^2.2.4"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.7.0",
+        "@vue/cli-plugin-eslint": "^3.7.0",
+        "@vue/cli-service": "^3.7.0",
+        "babel-eslint": "^10.0.1",
+        "eslint-plugin-vue": "^5.0.0",
+        "vue-template-compiler": "^2.5.21",
+        "webpack-cli": "^3.3.2"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
 }

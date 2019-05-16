@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Homepage msg="Welcome to Your Vue.js App"/>
+        <Homepage/>
     </div>
 </template>
 
@@ -17,7 +17,7 @@ const App = {
 export default App;
 </script>
 
-<style>
+<style lang="less">
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }

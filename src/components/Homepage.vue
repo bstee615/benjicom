@@ -2,16 +2,13 @@
     <div>
         <Header/>
 
-        <p v-for="blurb in blurbs" :key="blurb">
-            <vue-markdown>{{ blurb }}</vue-markdown>
-        </p>
+        <vue-markdown>{{ blurb }}</vue-markdown>
     </div>
 </template>
 
 <script>
 import Header from './Header.vue';
 import VueMarkdown from 'vue-markdown';
-import GetBlurbs from '../utils/GetBlurbs';
 
 const Homepage = {
     name: 'Homepage',
@@ -20,7 +17,9 @@ const Homepage = {
         VueMarkdown
     },
     computed: {
-        blurbs: GetBlurbs
+        blurb: function() {
+            return '';
+        }
     }
 };
 
