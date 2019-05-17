@@ -1,6 +1,7 @@
 <template>
     <div>
         <Header/>
+        
         <div v-if="loading">
             <div>loading...</div>
         </div>
@@ -27,7 +28,7 @@ const Homepage = {
             loading: true
         }
     },
-    mounted: function() {
+    created: function() {
         const self = this;
 
         axios.get('/blurb.md')

@@ -11,7 +11,7 @@ module.exports = {
     './src/main.js'
   ],
   output: {
-    path: path.join(__dirname, '../dist/assets/') ,
+    path: path.join(__dirname, '../dist/') ,
     filename: 'build.js'
   },
   module: {
