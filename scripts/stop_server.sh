@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kill "$(sudo ps -ef | grep node | head -n1 | awk '{ print $2 }')"
+ps -ef | grep node | grep -v grep | awk '{print $2}' | xargs kill -9
