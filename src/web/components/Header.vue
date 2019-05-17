@@ -19,7 +19,7 @@
         </li>
       </ul>
     </div>
-    <div class="contacts">
+    <div class="contacts main">
       <h2>Contact Info</h2>
       <ul>
         <li>
@@ -110,6 +110,16 @@ export default Header;
   h1,
   h2 {
     text-decoration: underline;
+  }
+
+  .contacts.main {
+    display: block;
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 </style>

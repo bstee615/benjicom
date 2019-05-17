@@ -55,6 +55,14 @@ export default Homepage;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        @media only screen and (max-width: 768px) {
+        justify-content: center;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
     }
 
     > div, > header {
