@@ -1,4 +1,4 @@
-src/utils/jquery-3.4.1.js
-src/assets/blurbs.md
+src/web/utils/jquery-3.4.1.js
 dist/**
 src/backend/**
+webpack.config*
