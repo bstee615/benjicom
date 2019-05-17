@@ -1,13 +1,6 @@
 # BenjiCom
 My personal website and portfolio for employers and others interested.
 
-## Installation
-- Clone the repo
-- Inside repo root:
-  - `npm i`
-  - `npm run dev` for verbose error/status messages
-  - `npm start` for release build (no output)
-
 ## Project setup
 ```
 yarn install
@@ -18,9 +11,14 @@ yarn install
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies frontend
 ```
 yarn run build
+```
+
+### Watches frontend for compile
+```
+yarn run watch
 ```
 
 ### Run your tests

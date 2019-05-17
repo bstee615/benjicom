@@ -8,10 +8,10 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: [
-    './src/main.js'
+    './src/web/main.js'
   ],
   output: {
-    path: path.join(__dirname, '../dist/') ,
+    path: path.join(__dirname, '../../dist/web') ,
     filename: 'build.js'
   },
   module: {

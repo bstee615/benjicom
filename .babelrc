@@ -1,11 +1,5 @@
 /* eslint-disable */
 
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
-      }
-    }]
-  ]
+  "presets": ["es2015"]
 }
