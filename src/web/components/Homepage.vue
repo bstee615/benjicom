@@ -1,12 +1,16 @@
 <template>
-    <div>
+    <div class="content">
         <Header/>
+
+        <hr/>
         
-        <div v-if="loading">
-            <div>loading...</div>
-        </div>
-        <div v-else>
-            <vue-markdown>{{ blurb }}</vue-markdown>
+        <div class="mainContent">
+            <div v-if="loading">
+                <div>loading...</div>
+            </div>
+            <div v-else>
+                <vue-markdown>{{ blurb }}</vue-markdown>
+            </div>
         </div>
     </div>
 </template>
@@ -43,5 +47,31 @@ export default Homepage;
 </script>
 
 <style lang="less">
+.content {
+    display: flex;
+    height: 100%;
+       
+    .center-children {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    > div, > header {
+        padding: 20px;
+    }
+
+    .header {
+        flex: 0 0 auto;
+    }
+
+    .mainContent {
+        flex: 1 1 auto;
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+}
 </style>
