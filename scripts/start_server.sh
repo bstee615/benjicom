@@ -1,2 +1,2 @@
 sudo yarn build
-sudo yarn start
+sudo nohup yarn start &

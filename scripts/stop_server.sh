@@ -1,1 +1,1 @@
-sudo shutdown -h now
+kill "$(sudo ps -ef | grep node | head -n1 | awk '{ print $2 }')"
