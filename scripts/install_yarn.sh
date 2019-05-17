@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # If yarn is not detected, install it.
 if which yarn; then
