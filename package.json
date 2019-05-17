@@ -1,21 +1,43 @@
 {
-  "name": "benjicom",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "dev": "SET DEBUG=benjicom:server & npm start",
-    "release-dev": "export DEBUG=benjicom:server && npm start",
-    "release": "sudo npm start"
-  },
-  "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "node-sass-middleware": "0.11.0",
-    "pug": "2.0.0-beta11"
-  },
-  "devDependencies": {}
+    "name": "benjicom",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "node app.js",
+        "watch": "webpack --watch --config src/webpack.config.dev.js",
+        "build": "webpack --config src/webpack.config.dev.js",
+        "lint": "eslint src"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-import-to-read-file-sync": "^0.2.1",
+        "babel-preset-env": "^1.7.0",
+        "core-js": "^2.6.5",
+        "express": "^4.16.4",
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "mini-css-extract-plugin": "^0.6.0",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.7.0",
+        "vue-markdown": "^2.2.4"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.7.0",
+        "@vue/cli-plugin-eslint": "^3.7.0",
+        "@vue/cli-service": "^3.7.0",
+        "babel-eslint": "^10.0.1",
+        "eslint-plugin-vue": "^5.0.0",
+        "vue-template-compiler": "^2.5.21",
+        "webpack-cli": "^3.3.2"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
 }

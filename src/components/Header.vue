@@ -5,14 +5,14 @@
 </template>
 
 <script>
-    const Header = {
-        name: "Header",
-        props: {
+const Header = {
+    name: 'Header',
+    props: {
 
-        }
     }
+};
 
-    export default Header;
+export default Header;
 </script>
 
 <style lang="less">
