@@ -6,19 +6,24 @@ My personal website and portfolio for employers and others interested.
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Runs server in production mode
 ```
-yarn run serve
+yarn run start
 ```
 
-### Compiles and minifies frontend
+### Compiles and minifies frontend for production
 ```
 yarn run build
 ```
 
-### Watches frontend for compile
+### Runs server in development mode
 ```
-yarn run watch
+yarn run start-dev
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run watch-dev
 ```
 
 ### Run your tests

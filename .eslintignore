@@ -2,3 +2,4 @@ src/web/utils/jquery-3.4.1.js
 dist/**
 src/backend/**
 webpack.config*
+package.json

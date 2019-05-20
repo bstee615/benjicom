@@ -2,7 +2,7 @@
     <div class="content">
         <Header/>
 
-        <hr/>
+        <hr>
         
         <div class="mainContent">
             <div v-if="loading">
