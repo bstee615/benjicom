@@ -3,11 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "node dist/server.js",
+        "start": "node NODE_ENV=production dist/server.js",
         "build": "webpack --config webpack.config.prod.js",
-        "start-dev": "cross-env node dist/server.js",
+        "start-dev": "cross-env NODE_ENV=development node dist/server.js",
         "watch-dev": "webpack --watch --config webpack.config.dev.js",
-        "test": "jest",
         "lint": "eslint src/web"
     },
     "dependencies": {
