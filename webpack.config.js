@@ -2,9 +2,10 @@
 
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const dev = process.env.NODE_ENV === 'development';
 
 const serverConfig = {
-  mode: 'production',
+  mode: dev ? 'development' : 'production',
   entry: [
     './src/backend/main.js'
   ],
@@ -14,13 +15,14 @@ const serverConfig = {
   },
   target: 'node',
   externals: [nodeExternals()],
-  plugins: []
+  plugins: [],
+  devtool: dev ? 'source-map' : false
 };
 
 const { VueLoaderPlugin } = require('vue-loader');
 
 const webConfig = {
-    mode: 'production',
+    mode: dev ? 'development' : 'production',
     entry: [
       './src/web/main.js'
     ],
@@ -46,7 +48,8 @@ const webConfig = {
     },
     plugins: [
       new VueLoaderPlugin()
-    ]
+    ],
+    devtool: dev ? 'source-map' : false
 };
 
 if (!process.env.NO_HOTLOAD) {
