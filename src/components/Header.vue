@@ -14,9 +14,10 @@
         <li>
           <router-link to="/">Homepage</router-link>
         </li>
-        <li>
+        <!-- Not finished yet -->
+        <!-- <li>
           <router-link to="/projects">Projects</router-link>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="contacts main">

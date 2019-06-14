@@ -43,7 +43,6 @@ export default Homepage;
 <style lang="less">
 .content {
   display: flex;
-  height: 100%;
 
   .center-children {
     display: flex;
