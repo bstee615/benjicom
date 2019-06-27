@@ -24,13 +24,13 @@ const Homepage = {
     return {
       blurb: null,
       loading: true,
-      baseUrl: process.env.VUE_APP_BASE_URL
+      baseUrl: process.env.BASE_URL
     };
   },
   created: function() {
     const self = this;
 
-    axios.get("/blurb.md").then(function(file) {
+    axios.get(this.baseUrl + "blurb.md").then(function(file) {
       self.blurb = file.data;
       self.loading = false;
     });

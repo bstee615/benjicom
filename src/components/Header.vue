@@ -2,7 +2,7 @@
   <header class="header">
     <div class="title">
       <div class="center-children">
-        <img class="rounded" src="/me.png" alt="Benji Steenhoek" />
+        <img class="rounded" :src="`${baseUrl}me.png`" alt="Benji Steenhoek" />
       </div>
       <h1>Benji Steenhoek</h1>
       <div class="divider" />
@@ -49,7 +49,11 @@
 <script>
 const Header = {
   name: "Header",
-  props: {}
+  data: function() {
+    return {
+      baseUrl: process.env.BASE_URL
+    };
+  }
 };
 
 export default Header;
